@@ -1,8 +1,5 @@
 using UnityEngine;
 
-//using Angle2D = PHATASS.Utils.Types.Angles.Angle2D;
-//using IAngle2D = PHATASS.Utils.Types.Angles.IAngle2D;
-
 using Averages = PHATASS.Utils.MathUtils.Averages;
 
 namespace PHATASS.Utils.Extensions
