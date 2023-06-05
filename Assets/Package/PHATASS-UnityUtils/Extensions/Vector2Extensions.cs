@@ -1,8 +1,5 @@
 using UnityEngine;
 
-using IAngle2D = PHATASS.Utils.Types.Angles.IAngle2D;
-using static PHATASS.Utils.Types.Angles.IAngle2DFactory;
-
 namespace PHATASS.Utils.Extensions
 {
 	public static class Vector2Extensions
@@ -63,7 +60,7 @@ namespace PHATASS.Utils.Extensions
 		}
 	//ENDOF EFromToVector2Normalized
 	
-	//EFromToDegrees2D
+	//EFromToDegrees
 	// Returns the angular directiom from fromVector to toVector, in degrees
 		public static float EFromToDegrees (this Vector2 fromVector, Vector2 toVector)
 		{
@@ -72,15 +69,7 @@ namespace PHATASS.Utils.Extensions
 				to: fromVector.EFromToVector2Normalized(toVector) //generate a directional vector
 			);
 		}
-	//ENDOF EFromToDegrees2D
-
-	//EFromToAngle2D
-	// Returns the angular directiom from fromVector to toVector
-		public static IAngle2D EFromToAngle2D (this Vector2 fromVector, Vector2 toVector)
-		{
-			return fromVector.EFromToDegrees(toVector).EDegreesToAngle2D();
-		}
-	//ENDOF EFromToAngle2D
+	//ENDOF EFromToDegrees
 
 	//ESignedAngle
 	// Returns Vector2.SignedAngle(a, b) but accessible as an extension method
